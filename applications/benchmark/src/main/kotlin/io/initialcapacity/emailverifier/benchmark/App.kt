@@ -14,7 +14,7 @@ data class Confirmation(
 )
 
 fun main(): Unit = runBlocking {
-    val port = getEnvInt("PORT", 9090)
+    val port = getEnvInt("PORT", 9091)
 
     val benchmark = Benchmark(
         registrationUrl = System.getenv("REGISTRATION_URL") ?: "http://localhost:8081",

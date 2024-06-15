@@ -11,7 +11,7 @@ class App
 private val logger = LoggerFactory.getLogger(App::class.java)
 
 fun main(): Unit = runBlocking {
-    val port = System.getenv("PORT")?.toInt() ?: 9090
+    val port = System.getenv("PORT")?.toInt() ?: 9091
 
     logger.info("waiting for mail")
     embeddedServer(

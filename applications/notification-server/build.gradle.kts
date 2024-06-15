@@ -40,7 +40,7 @@ task<JavaExec>("run") {
     environment("RABBIT_URL", "amqp://localhost:5672")
     environment("FROM_ADDRESS", "dev@initialcapacity.io")
     environment("SENDGRID_API_KEY", "super-secret")
-    environment("SENDGRID_URL", "http://localhost:9090")
+    environment("SENDGRID_URL", "http://localhost:9091")
 }
 
 tasks {
