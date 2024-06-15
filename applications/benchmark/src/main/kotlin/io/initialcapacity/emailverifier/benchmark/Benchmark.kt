@@ -49,6 +49,13 @@ class Benchmark(
         }.also { duration ->
             stop()
             logger.info("benchmark finished in $duration")
+            val rate  = registrationCount / duration.inWholeSeconds;
+            logger.info("rate: $rate registrations per second")
+            if(rate < 50) {
+                logger.info("rate is less than 50 registration per second, consider increasing the number of workers");
+                throw Exception("rate is less than 50 registration per second, consider increasing the number of workers");
+            }
+
         }
     }
 
